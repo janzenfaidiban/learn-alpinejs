@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learn Alpine.js</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <section  class="bg-blue-900 m-5 p-5 rounded-lg">
+      <div x-data="{ tab: 'foo'}">
+
+        <div class="mb-5">
+          <button :class="{'active': tab === 'course'}" @click="tab = 'course'" class="bg-gray-900 text-white border-black p-3 rounded-md">
+            Course
+          </button>
+
+          <button :class="{'active': tab === 'community'}" @click="tab = 'community'" class="bg-gray-900 text-white border-black p-3 rounded-md">
+            Community
+          </button>
+        </div>
+
+        <div class="bg-gray-100 p-5 rounded-md" x-show="tab === 'course'" @click.away="tab = true">
+          <h2 class="font-medium text-2xl pb-2">Course</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="bg-gray-100 p-5 rounded-md" x-show="tab === 'community'" @click.away="tab = false" >
+          <h2 class="font-medium text-2xl pb-2">Community</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section  class="bg-yellow-500 m-5 p-5 rounded-lg">
+      <div x-data="{ tab: 'foo'}">
+
+        <div class="mb-5">
+          <button :class="{'active': tab === 'course'}" @click="tab = 'course'" class="bg-gray-900 text-yellow-500 border-black p-3 rounded-md">
+            Course
+          </button>
+
+          <button :class="{'active': tab === 'community'}" @click="tab = 'community'" class="bg-gray-900 text-yellow-500 border-black p-3 rounded-md">
+            Community
+          </button>
+        </div>
+
+        <div class="bg-gray-100 p-5 rounded-md" x-show="tab === 'course'" @click.away="tab = true">
+          <h2 class="font-medium text-2xl pb-2">Course</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="bg-gray-100 p-5 rounded-md" x-show="tab === 'community'" @click.away="tab = false" >
+          <h2 class="font-medium text-2xl pb-2">Community</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </body>
+</html>
