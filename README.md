@@ -12,6 +12,5 @@ RESULT :
 
 2) tab-bar.html - https://janzenfaidiban.github.io/learn-alpinejs/project-01/tab-bar.html
 
-2) tab-bar.html - https://janzenfaidiban.github.io/learn-alpinejs/project-01/tab-bar.html
 
 3) list.html - https://janzenfaidiban.github.io/learn-alpinejs/project-01/list.html
