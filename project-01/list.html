@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learn Alpinejs : LIST</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-5">
+
+
+  <div
+    x-data="{
+      todos: {
+        1: { id: 1, sepaker_name: 'Janzen Faidiban', email: 'janzen.faidiban@gmail.com' },
+        2: { id: 2, sepaker_name: 'Heavenly Joice', email: 'heavenly.jf@gmail.com' },
+        3: { id: 3, sepaker_name: 'William Maai', email: 'william.maai@gmail.com' },
+        4: { id: 4, sepaker_name: 'Yosepina Done', email: 'ydone@gmail.com' },
+      }
+    }"
+  >
+
+  <table class="border-collapse border border-slate-500 mt-5 w-full">
+    <thead class="bg-blue-900 text-white">
+      <tr>
+        <th class="border border-slate-500 p-2 w-2/6">Name</th>
+        <th class="border border-slate-500 p-2 w-4/6">Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <template x-for="todo in Object.values(todos)" :key="todo">
+      <tr>
+        <td class="border border-slate-700 p-2" x-text="todo.sepaker_name"></td>
+        <td class="border border-slate-700 p-2" x-text="todo.email"></td>
+      </tr>
+      </template>
+    </tbody>
+
+  </table>
+</div>
+
+  </body>
+</html>
